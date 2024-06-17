@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="w-full bg-stone-700 py-16">
       <div className="max-w-screen-xl w-full mx-auto flex flex-col items-start px-4 sm:px-7 lg:px-10 xl:px-7 2xl:px-0">
-        <div className="w-full flex items-start justify-between">
+        <div className="w-full flex flex-col md:flex-row items-start justify-between">
           {/* Info */}
           <div>
             <Link to="/" className="w-fit">
@@ -15,14 +15,14 @@ const Footer = () => {
               </span>
             </Link>
 
-            <div className="text-white mt-10">
+            <div className="text-white mt-5 md:mt-10">
               <h2 className="mb-2 text-sm">Get in Touch with Us</h2>
               <div className="border border-white rounded-full p-1.5 flex">
                 <input
                   type="text"
                   name="msg"
                   id="msg"
-                  className="w-[300px] py-1.5 px-2 bg-red-0 rounded-l-full bg-transparent border-0 focus:ring-0 focus:outline-none placeholder:text-white placeholder:text-[0.9rem]"
+                  className="w-[270px] md:w-[300px] py-1.5 px-2 bg-red-0 rounded-l-full bg-transparent border-0 focus:ring-0 focus:outline-none placeholder:text-white placeholder:text-[0.9rem]"
                   placeholder="Enter your message"
                 />
                 <button
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
 
           {/* Footer links */}
-          <div className="flex items-start space-x-24">
+          <div className="flex items-start space-x-24 mt-12 md:mt-0">
             {/* Basic navigation */}
             <div>
               <h2 className="font-medium text-lg mb-2 text-white">
