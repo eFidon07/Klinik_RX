@@ -20,12 +20,12 @@ const NewArrivals = () => {
 
       <div className="flex flex-wrap items-center justify-center sm:gap-x-[4%] lg:gap-x-[3.5%] gap-y-3 mt-12 mb-10">
         {products
-          .filter((_, index) =>
+          .filter((_, i) =>
             products.length < 6 && products.length >= 3
-              ? index < 3
+              ? i < 3
               : products.length >= 6
-              ? index < 6
-              : index <= products.length
+              ? i < 6
+              : i <= products.length
           )
           .map((_, index) => (
             <ProductCard

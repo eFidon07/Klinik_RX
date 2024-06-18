@@ -54,13 +54,19 @@ export const faqs = [
   },
   {
     question: "How do I place an order?",
-    answer: `1. Search products of your choice.
+    answer: [
+      "Search products of your choice.",
+      "Add the items you want to purchase to cart.",
+      "Finalize payment with admin on WhatsApp.",
+      "Wait for items to be delivered to you.",
+    ],
+    // answer: `1. Search products of your choice.
 
-    2. Add the items you want to purchase to cart.
+    // 2. Add the items you want to purchase to cart.
 
-    3. Finalize payment with admin on WhatsApp.
-    
-    4. Wait for items to be delivered to you.`,
+    // 3. Finalize payment with admin on WhatsApp.
+
+    // 4. Wait for items to be delivered to you.`,
   },
   {
     question: "When do my items get delivered?",

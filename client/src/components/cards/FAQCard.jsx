@@ -11,11 +11,23 @@ const FAQCard = ({ question, answer, showAnswer, setShowAnswer }) => {
         <h1 className="text-[22px] text-stone-700 font-semibold">{question}</h1>
         <ArrowDown2 />
       </div>
-      {showAnswer && (
-        <p className="text-stone-600 text-[0.95rem] mt-3 whitespace-pre-line">
-          {answer}
-        </p>
-      )}
+      {showAnswer &&
+        (!Array.isArray(answer) ? (
+          <p className="text-stone-600 text-[0.95rem] mt-3 whitespace-pre-line">
+            {answer}
+          </p>
+        ) : (
+          <ol className="list-decimal list-inside flex flex-col gap-y-2 mt-3">
+            {answer.map((item, index) => (
+              <li
+                key={index}
+                className="text-stone-600 text-[0.95rem] whitespace-pre-line"
+              >
+                {item}
+              </li>
+            ))}
+          </ol>
+        ))}
     </div>
   );
 };

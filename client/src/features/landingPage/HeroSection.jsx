@@ -6,8 +6,8 @@ import { PrimaryLink, UsageProcessCard } from "../../components";
 const HeroSection = () => {
   return (
     <section className="mb-7">
-      <div className="flex flex-col lg:flex-row items-center lg:gap-x-[4%] gap-y-3 lg:gap-y-0 pt-12">
-        <h1 className="w-full md:w-[65%] text-3xl lg:text-5xl leading-tight font-medium text-stone-700">
+      <div className="flex flex-col md:flex-row items-center lg:gap-x-[4%] gap-y-3 lg:gap-y-0 pt-12">
+        <h1 className="w-full md:w-[55%] lg:w-[65%] text-3xl lg:text-5xl leading-tight font-medium text-stone-700">
           Your one-stop shop for a healthier you! Order meds online today!
         </h1>
 
@@ -30,16 +30,17 @@ const HeroSection = () => {
           className="relative w-full h-[20rem] md:h-[30rem] rounded-2xl object-cover mt-14 shadow-2xl"
         />
 
-        <div className="w-full md:w-[30%] bg-primary/70 md:bg-primary/50 backdrop-blur-lg md:absolute bottom-0 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 items-start md:m-3 rounded-2xl px-3 py-2 mt-14">
+        <div className="w-full md:w-[95%] lg:w-[30%] bg-primary/70 md:bg-primary/50 backdrop-blur-lg md:absolute md:bottom-2 lg:bottom-0 md:left-1/2 md:-translate-x-1/2 lg:left-0 lg:translate-x-0 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 items-start lg:m-3 rounded-2xl px-3 py-2 mt-14">
           {howToSteps.map((step, index) => (
             <UsageProcessCard key={index} label={step.label} icon={step.icon} />
           ))}
         </div>
 
-        <div className="w-[95%] md:w-1/3 h-fit absolute bottom-[22rem] sm:bottom-[14rem] md:top-0 right-1/2 translate-x-1/2 md:translate-x-0 md:right-0 flex flex-wrap items-start gap-x-7 bg-primary/50 backdrop-blur-lg md:m-3 rounded-2xl px-6 py-4 mt-3">
+        {/* The width for the below element: w-[95%] md:w-1/2 lg:w-1/3 */}
+        <div className="w-[95%] md:w-fit h-fit absolute bottom-[22rem] sm:bottom-[14rem] md:top-0 right-1/2 translate-x-1/2 md:translate-x-0 md:right-0 flex flex-wrap items-start gap-x-7 bg-primary/50 backdrop-blur-lg md:m-2 lg:m-3 rounded-2xl px-6 py-4 mt-3">
           {platformStats.map((stat, index) => (
             <div key={index} className="flex flex-col">
-              <span className="text-2xl sm:text-3xl md:text-[2.7rem] leading-tight font-medium text-white">
+              <span className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.7rem] leading-tight font-medium text-white">
                 {stat.amount}
               </span>
               <span className="text-sm mt-2 font-medium capitalize text-white">

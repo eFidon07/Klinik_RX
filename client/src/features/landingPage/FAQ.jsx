@@ -7,21 +7,21 @@ const FAQ = () => {
   const [showCard, setCard] = useState(0);
 
   return (
-    <section className="w-full mt-24 md:mt-32 flex flex-col md:flex-row items-center mb-12">
+    <section className="w-full mt-24 lg:mt-32 flex flex-col lg:flex-row items-start lg:items-center mb-12">
       <img
         src="/img/faq-image.jpg"
         alt="Image representing frequently asked questions"
-        className="md:flex-1 w-full md:w-[35%] h-[20rem] md:h-[28rem] object-cover object-center rounded-3xl"
+        className="lg:flex-1 w-full lg:w-[35%] h-[20rem] md:h-[28rem] object-cover object-center rounded-3xl"
       />
       {/* Height for image: h-[20rem] md:h-[28rem] */}
 
-      <div className="w-full md:w-[55%] flex justify-end">
-        <div className="md:w-[90%]">
-          <h1 className="w-full mt-5 md:mt-0 text-3xl sm:text-4xl md:text-5xl font-semibold text-primary">
+      <div className="w-full lg:w-[55%] flex lg:justify-end">
+        <div className="w-full lg:w-[90%]">
+          <h1 className="w-full mt-5 lg:mt-0 text-3xl sm:text-4xl md:text-5xl font-semibold text-primary">
             Queries About Klinik RX
           </h1>
 
-          <div className="mt-7 flex flex-col">
+          <div className="w-full mt-7 flex flex-col">
             {faqs.map((faq, index) => (
               <FAQCard
                 key={index}

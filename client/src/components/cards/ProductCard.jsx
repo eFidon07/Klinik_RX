@@ -45,9 +45,12 @@ const ProductCard = ({
       <div className="w-full h-full bg-black/35 absolute top-0 left-0 rounded-2xl">
         <div className="m-3.5 w-fit flex items-center gap-x-2">
           {category
-            .filter((_, index) => index < 2)
+            .filter((_, i) => i < 2)
             .map((item, index) => (
-              <span className="text-sm font-medium text-stone-900 bg-stone-300/65 backdrop-blur-md rounded-full py-2 px-3 capitalize">
+              <span
+                key={index}
+                className="text-sm font-medium text-stone-900 bg-stone-300/65 backdrop-blur-md rounded-full py-2 px-3 capitalize"
+              >
                 {item}
               </span>
             ))}
